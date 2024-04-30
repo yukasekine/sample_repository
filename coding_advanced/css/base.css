@@ -37,9 +37,10 @@ body {
 /* //全体の背景色の色 */
 body{
 	background-color: #FFEFD5;
+	width: 1310px;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:320px) {
 body{ 
 	background-color:#FFEFD5 ;
 	width: 320px;
@@ -48,12 +49,18 @@ body{
 
 /* //カードのヘッダー */
 
+.card{
+	width: 1310px;
+}
+
+
 .card-header{
+	width: 1310px;
 	font-size: 48px;
 	height: 80px;
 	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	font-weight: 100;
 	display: flex;
+	line-height: 60px;
 	background-color: rgba(211, 211, 211, 0.962) !important;
 }
 
@@ -65,13 +72,13 @@ body{
 
 .navbar-color2{	
 	background-color: lightgray !important;
-	padding-left: 400px;
+	padding-left: 250px;
 
 }
 
 .nav-link{
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	font-size: 23px;
+	font-size: 20px;
 	font-weight: lighter !important;
 	padding-right: 45px !important;
 }
@@ -81,25 +88,37 @@ body{
 	.card{
 		background-color: #FFEFD5;
 		border: 0; 
+		width: 320px;
+		height: auto;
 	}
 }
 
 
 @media screen and (max-width:320px) {
 	.card-header{ 
+		width: 320px;
 		font-size: 30px;
 		padding-left: 0px;
+		padding-bottom: 0px;
 		padding-top: 0px;
-		padding-bottom: -0px;
-		height: auto;
 		flex-direction: column;
+		height: auto;
 	}
 }
+
 
 
 @media screen and (max-width:320px) {
 	.navbar-color{ 
 		margin-left: 250px;
+		margin-bottom: -10px;
+	}
+}
+
+
+@media screen and (max-width:320px) {
+	.container-fluid{ 
+		margin-top: -10px;
 	}
 }
 
@@ -108,8 +127,10 @@ body{
 	.navbar-color2{ 
 		width: 320px;
 		padding-left: 0px;
+		padding-top: 0px;
 		padding-bottom: 0px;
 		flex-direction: column;
+		margin-top: 17px;
 	}
 }
 
@@ -169,6 +190,7 @@ body{
 
 
 .swiper{
+	width: 1310px !important;
 	margin-top: -25px;
 	overflow: visible;
 }
@@ -176,42 +198,55 @@ body{
 .swiper-scrollbar {
 	background-color: DDDDDD;
 	height: 6px !important;
-	margin-bottom: -20px !important;
+	margin-bottom: -10px !important;
+	width: 1310px !important;
+	left: 0px !important;
   }
 
   .swiper-scrollbar-drag {
 	background-color: #555555;
-	width: 400px !important;
+	width: 300px !important;
   }
 
 
   @media screen and (max-width:320px) {
 	.swiper{ 
-		height: 290px;
+		width: 320px  !important;
+		height: 300px;
 		margin-top: 0px;
 		}
 	}
 
 	@media screen and (max-width:320px) {
 		.swiper-wrapper{ 
-			width: 260px;
+			width: 260px !important;
 			height: 260px;
-  			margin-inline: auto;
 		}
 	}
 
 	@media screen and (max-width:320px) {
+		.swiper-slide{ 
+			width: 320px !important;
+			height: 260px  !important; 
+		}
+	}
+	
+
+	@media screen and (max-width:320px) {
 		.swiper-slide img{ 
-			width: 260px !important;
-			height: 260px;
+			width: 250px !important;
+			height: 260px  !important; 
+			margin: auto !important;
 		}
 	}
 	
 	@media screen and (max-width:320px) {
 		.swiper-pagination{
-		margin-bottom: -10px !important;
+		margin-bottom: -5px !important;
+		width: 320px !important;;
 	}
 	}	
+
 
 	@media screen and (max-width:320px) {
 		.swiper-scrollbar{ 
@@ -231,28 +266,26 @@ body{
 
   /* //見出しの部分 */
 #box1{
-	 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	 font-size: 35px;
-	 margin-left: 330px;
-	 margin-top: 20px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 30px;
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 900px;
   }
 
   
 @media screen and (max-width:320px) {
 	#box1{ 
 		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-		font-size: 20px;
-		margin: 25px auto;
-		margin-right: 25px;
-		width:80%;
+		font-size: 25px;
+		width: 260px;
 		}
 	}
 	
 
 .accordion{
-	text-align: center;
+	width: 1310px;
 }
-
 
 #accordionExample .accordion-header .accordion-button {
 	box-shadow: none;
@@ -266,10 +299,10 @@ body{
 
 .accordion-item{
 	margin:0 auto;
-	width: 1100px;
+	width: 900px;
 	background-color: #FFEFD5;
 	line-height: 50px;
-	font-size: 20px;
+	font-size: 15px;
 	border: #FFEFD5;
 }
 
@@ -280,10 +313,17 @@ body{
 
 
 @media screen and (max-width:320px) {
+	.accordion{
+		width: 320px;
+	}
+}
+
+
+@media screen and (max-width:320px) {
 	.accordion-item{ 
 		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-		margin-right: 25px;
-		width:80%;
+		margin: auto;
+		width: 260px;
 	}
 }
 
@@ -297,7 +337,7 @@ body{
 
 @media screen and (max-width:320px) {
 	.accordion-body{
-		font-size: 15px;
+		font-size: 12px;
 		line-height: 45px;
 	}
 }
@@ -309,6 +349,9 @@ body{
 	background-color: #FFEFD5;
 	opacity: 0;
 	visibility: hidden;
+	width: 900px;
+	margin: 0 auto;
+	margin-top: -20px;
   }
 
 
@@ -324,78 +367,125 @@ body{
 
 .row{
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	text-align: center;
+	width: 900px;
+	margin: 0 auto;
 }
 	
 
 .col1{
-	padding-top: 130px;
+	width: 900px;
+	margin: 0 auto;
+	padding-top: 80px;
 	font-size: 40px;
-	padding-left: 100px;
-	padding-bottom: 20px;
+	padding-bottom: 60px;
 }
 	
+.col33{
+	width: 900px;
+	margin-top: -60px;
+}
+
 
 .col2{
-	font-size: 20px;
-	Text-align:left;
-	width: 600px;
-	position: relative;
-	top: 230px;
-	padding-left: 60px;
+	font-size: 18px;
+	width: 400px;
+	padding-left: 20px;
+	padding-top: 40px;
+	float: right  !important;
 }
 
 .col3{
-	padding-left: 330px;
+	width: 900px;
+	margin: 0 auto;
+	padding-top: 10px;
 }
 
 .col4{
-	margin-top: 100px;
 	font-size: 40px;
-	padding-left: 70px;
+	width: 1100px;
+	margin: 0 auto;
+	padding-top: 80px;
+}
+
+
+.col44{
+	width: 900px;
+	margin-top: 60px;
+
 }
 
 
 .col5{
-	font-size: 20px;
-	Text-align:left;
-	width: 600px;
-	position: relative;
-	top: 230px;
-	padding-left: 60px;
+	font-size: 18px;
+	width: 400px;
+	padding-top: 0px;
+	padding-left: 20px;
+	float: right  !important
 }
 
 .col6{
-	padding-left: 330px;
+	width: 900px;
+	margin: 0 auto;
+	margin-top: -50px;
 }
 
 .col7{
-	margin-top: 100px;
+	margin: 0 auto;
 	font-size: 40px;
-	padding-left: 20px;
+	width: 900px;
+	margin-top: 80px;
 }
 
+.col55{
+	width: 900px;
+	margin-top: 60px;
+}
+
+
 .col8{
-	font-size: 20px;
-	Text-align:left;
-	width: 600px;
-	position: relative;
-	top: 230px;
-	padding-left: 60px;
+	font-size: 18px;
+	width: 400px;
+	padding-top: 20px;
+	padding-left: 20px;
+	float: right  !important;
 }
 
 .col9{
-	padding-left: 330px;
+	width: 900px;
+	margin: 0 auto;
+	margin-top: -50px;
 }
 
+
+@media screen and (max-width:320px) {
+	.final-box{
+		width: 260px;
+		height: 380px;
+	}
+}
+
+
+@media screen and (max-width:320px) {
+	.row{
+		width: 260px;
+		margin-left: -10px;
+	}
+}
 
 
 @media screen and (max-width:320px) {
 	.col1{
-		font-size: 20px;
-		padding-left: 0;
-		padding-top: 20px;
-		width: 80%;
+		font-size: 25px;
+		padding-top: 50px;
+		width: 260px;
+	}
+}
+
+@media screen and (max-width:320px) {
+	.col33{
+		display: flex;
+		flex-direction:column-reverse;
+		width: 100%;
 	}
 }
 
@@ -403,22 +493,17 @@ body{
 @media screen and (max-width:320px) {
 	.col2 {
 		font-size: 15px;
-		padding-top: 20px;
-		top: 180px;
-		margin-bottom:55px;
-    	margin-left: auto;
-		margin-right: 25px;
-		width:95%;
+		padding-top: 10px;
+		width: 260px;
+		padding-left: 0px;
 	}
 }
 
 
 @media screen and (max-width:320px) {
 	.col3{
-		width: 20px !important;
-		padding-left: 50px;
-		margin-top: -200px ;
-		margin-bottom: 180px;
+		width: 260px;
+		margin-top: 0px;
 	}
 }
 
@@ -428,37 +513,39 @@ body{
 	 width: 260px;
 	 height: 200px;
 	}
-  }
+}
 
 
   @media screen and (max-width:320px) {
 	.col4{
-		margin-top: -30px;
-		font-size: 20px;
-		width: 80%;
-		padding-left: 0;
+		font-size: 25px;
+		width: 260px;
+	}
+}
+
+@media screen and (max-width:320px) {
+	.col44{	
+		display: flex;
+		flex-direction:column-reverse;
+		width: 260px;
+		height: 90px;
+		padding-top: 280px;
 	}
 }
 
 @media screen and (max-width:320px) {
 	.col5{
 		font-size: 15px;
-		padding-top: 20px;
-		top: 200px;
-		margin-bottom:55px;
-    	margin-left: auto;
-		margin-right: 25px;
-		width:95%;
+		width:260px;
+		padding-top: 10px;
+		padding-left: 0px;
 	}
 }
 
 
 @media screen and (max-width:320px) {
 	.col6{
-		width: 20px !important;
-		padding-left: 50px;
-		margin-top: -170px ;
-		margin-bottom: 180px;
+		width: 260px !important;
 	}
 }
 
@@ -470,27 +557,31 @@ body{
   }
 
 
-
   @media screen and (max-width:320px) {
 	.col7{
-		margin-top: -30px;
-		font-size: 20px;
-		width: 80%;
-		padding-left: 0;
+		font-size: 25px;
+		width: 260px;
+		margin-top: 120px;
 	}
 }
 
+
+@media screen and (max-width:320px) {
+	.col55{
+		display: flex;
+		flex-direction:column-reverse;
+		width: 260px;
+		margin-top: 35px;
+	}
+}
 
 
 @media screen and (max-width:320px) {
 	.col8{
 		font-size: 15px;
-		padding-top: 20px;
-		top: 200px;
-		margin-bottom:55px;
-    	margin-left: auto;
-		margin-right: 25px;
-		width:95%;
+		width:260px;
+		padding-top: 10px;
+		padding-left: 0px;
 	}
 }
 
@@ -498,10 +589,7 @@ body{
 
 @media screen and (max-width:320px) {
 	.col9{
-		width: 20px !important;
-		padding-left: 50px;
-		margin-top: -180px ;
-		margin-bottom: 180px;
+		width: 260px !important;
 	}
 }
 
@@ -519,11 +607,11 @@ body{
 /* //アドレスの部分 */
 
 .mb-3{
-	max-width:1150px !important;
-	height: 450px;
-	margin:0 auto;
+	max-width:900px !important;
+	margin: 0 auto;
+	height: 400px;
 	background-color: black;
-	margin-top: 50px !important;
+	margin-top: 60px !important;
 }
 
 .row{
@@ -540,8 +628,15 @@ body{
 	padding-left: 180px;
 }
 
+
+.img-fluid{
+	width: 670px;
+	height: 320px;
+
+}
+
 .col-md-4{
-	line-height: 30px;
+	line-height: 13px;
 	padding-top: 30px;
 }
 
@@ -565,10 +660,17 @@ p{
 
 @media screen and (max-width: 320px) {
 	.mb-3{
-		width: 250px;
-		height: 240px;
-		top: -70px;
-		word-break: break-all;
+		width: 260px !important;
+		height: 240px !important;
+		top: 60px;
+	}
+  }
+
+
+  @media screen and (max-width: 320px) {
+  	.row .g-0{
+		width: 260px;
+		height: 30px;
 	}
   }
 
@@ -577,13 +679,13 @@ p{
 	.col-md-4{
 		padding-top: 0px;
 		line-height: 20px;
+		height: 300px;
 	}
   }
 
   
   @media screen and (max-width: 320px) {
 	h5.card-title {
-		padding-left: 10px;
 		padding-top: 0px;
 		font-size: 25px;
 	}
@@ -591,7 +693,6 @@ p{
 
   @media screen and (max-width: 320px) {
 	p.card-title {
-		padding-left: 10px;
 		padding-top: 0px;
 		font-size: 23px;
 	}
@@ -615,18 +716,28 @@ p{
 	}
   }
 
+  @media screen and (max-width: 320px) {
+  .col-md-8{
+	width: 260px  !important;
+	position: relative;
+	top: -66px;
+  	}
+  }
+
+
 
   @media screen and (max-width: 320px) {
 	.card-body{
-	  	width: 320px;
-		margin-left: -196px;
+	  	width: 290px;
 		margin-top: -40px;
+		position: absolute;
+		left: -2%;
 	}
   }
 
   @media screen and (max-width: 320px) {
 	img.img-fluid{
-		width: 250px;
+		width: 260px  !important;
 		height: 180px;
 	}
   }
@@ -635,12 +746,13 @@ p{
 /* //丸表記の部分 */
 
 .sample-box{
+	margin: 0 auto;
 	margin-top: 30px;
 }
 
 .title{
 	text-align: center;
-	font-size: 50px;
+	font-size: 40px;
 }
 
 .title-box{
@@ -649,18 +761,16 @@ p{
 
 
 .child{
+	width: 900px;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	margin: 0 auto;
 }
 	
 .shop-img{
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 300px;
-	width: 280px;
-	height: 280px;
+	border-radius: 230px;
+	width: 230px;
+	height: 230px;
 	padding: 30px;
 }
 
@@ -672,25 +782,25 @@ p{
 
 .children{
 	display: flex;
-	padding: 10px;
-	margin-top: -35px;
+	margin-top: -30px;
+	margin-left: 10px;
 }
 
 text{
 	font-family:'Courier New', Courier, monospace;
-	font-size: 18px;
+	font-size: 14px;
 }
 
 
 @media screen and (max-width: 320px){
 	.title-box {
-		display:none
+		display:none;
 	}
 }
 
 @media screen and (max-width: 320px){
 	.child {
-		display:none
+		display:none;
 	}
 }
 
@@ -701,6 +811,7 @@ text{
 	background-color: darkgray;
 	height: 110px;
 	margin-top: 30px;
+	width: 1310px  !important;
 }
 
 .card-footer2{
@@ -720,21 +831,23 @@ h1{
 	.card2{
 		margin-top: 130px !important;
 		height: 80px !important;
+		width: 320px !important;
 	}
 }
 
 @media screen and (max-width: 320px){
 	.card-footer2{
+		width: 320px;
 		font-size: 8px;
 		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-		height: 30px !important;
+		height: 50px !important;
 	}
 }
 
 
 @media screen and (max-width: 320px){
 	h1{
-		padding: 10px;
+		padding: 5px;
 	}
 }
 

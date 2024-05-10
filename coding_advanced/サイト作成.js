@@ -56,19 +56,19 @@ handleTabletChange(mediaQuery)
 
 
 
-
-$(function () {
-  $(window).scroll(function () {
-    $(".final-box").each(function () {
-      var targetOffset = $(this).offset().top;
-      var windowHeight = $(window).height();
-      var scrollPosition = $(window).scrollTop() + windowHeight;
-      if (scrollPosition > targetOffset) {
-        $(this).addClass("is-active");
-      }
-    });
+$(function(){
+  $(window).scroll(function (){
+      $('.final-box').each(function(){
+          var position = $(this).offset().top;
+          var scroll = $(window).scrollTop();
+          var windowHeight = $(window).height();
+          if (scroll > position - windowHeight + 100){
+            $(this).addClass('is-active');
+          }
+      });
   });
 });
+
 
 
 

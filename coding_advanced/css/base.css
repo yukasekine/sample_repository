@@ -35,9 +35,11 @@ body {
 }
 
 /* //全体の背景色の色 */
+
 body{
 	background-color: #FFEFD5;
-	width: 1310px;
+	width: 100vw;
+
 }
 
 @media screen and (max-width:320px) {
@@ -50,12 +52,11 @@ body{
 /* //カードのヘッダー */
 
 .card{
-	width: 1310px;
+	width: 100vw;
 }
 
 
 .card-header{
-	width: 1310px;
 	font-size: 48px;
 	height: 80px;
 	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -73,7 +74,6 @@ body{
 .navbar-color2{	
 	background-color: lightgray !important;
 	padding-left: 250px;
-
 }
 
 .nav-link{
@@ -192,7 +192,8 @@ body{
 .swiper{
 	width: 1310px !important;
 	margin-top: -25px;
-	overflow: visible;
+	overflow: hidden;
+	width:100vw
 }
 
 .swiper-scrollbar {
@@ -201,6 +202,7 @@ body{
 	margin-bottom: -10px !important;
 	width: 1310px !important;
 	left: 0px !important;
+	overflow: visible;
   }
 
   .swiper-scrollbar-drag {
@@ -230,7 +232,7 @@ body{
 			height: 260px  !important; 
 		}
 	}
-	
+
 
 	@media screen and (max-width:320px) {
 		.swiper-slide img{ 
@@ -239,7 +241,7 @@ body{
 			margin: auto !important;
 		}
 	}
-	
+
 	@media screen and (max-width:320px) {
 		.swiper-pagination{
 		margin-bottom: -5px !important;
@@ -255,7 +257,7 @@ body{
 			margin-bottom: -10px !important;
 		}
 	}
-	
+
 	@media screen and (max-width:320px) {
 		.swiper-scrollbar-drag{ 
 			width: 70px !important;
@@ -273,7 +275,7 @@ body{
 	width: 900px;
   }
 
-  
+
 @media screen and (max-width:320px) {
 	#box1{ 
 		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -281,10 +283,10 @@ body{
 		width: 260px;
 		}
 	}
-	
+
 
 .accordion{
-	width: 1310px;
+	width: 100vw;
 }
 
 #accordionExample .accordion-header .accordion-button {
@@ -295,7 +297,7 @@ body{
 	height: 50px;
 	border: #FFC7AF;
 }
-	
+
 
 .accordion-item{
 	margin:0 auto;
@@ -370,7 +372,7 @@ body{
 	width: 900px;
 	margin: 0 auto;
 }
-	
+
 
 .col1{
 	width: 900px;
@@ -379,7 +381,7 @@ body{
 	font-size: 40px;
 	padding-bottom: 60px;
 }
-	
+
 .col33{
 	width: 900px;
 	margin-top: -60px;
@@ -460,7 +462,17 @@ body{
 @media screen and (max-width:320px) {
 	.final-box{
 		width: 260px;
-		height: 380px;
+		height:380px;
+	}
+}
+
+@media screen and (max-width:320px) {
+	.is-active{
+		opacity: 1;
+		visibility: visible;
+		transition-duration: 0.7s;
+		transition-delay: 0.7s;
+		transition-timing-function: ease-in;
 	}
 }
 
@@ -683,7 +695,7 @@ p{
 	}
   }
 
-  
+
   @media screen and (max-width: 320px) {
 	h5.card-title {
 		padding-top: 0px;
@@ -765,7 +777,7 @@ p{
 	display: flex;
 	margin: 0 auto;
 }
-	
+
 .shop-img{
 	display: flex;
 	border-radius: 230px;
@@ -811,7 +823,7 @@ text{
 	background-color: darkgray;
 	height: 110px;
 	margin-top: 30px;
-	width: 1310px  !important;
+	width: 100vw  !important;
 }
 
 .card-footer2{
@@ -850,4 +862,3 @@ h1{
 		padding: 5px;
 	}
 }
-

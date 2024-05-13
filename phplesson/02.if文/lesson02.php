@@ -10,16 +10,12 @@
 $score = 100; //いくつかのケースで動作確認を行ってください。
  
 if ($score >= 80) {
-
   echo $score . '点は「優」です。';
 } else if($score >= 60) {
-
   echo $score . '点は「良」です。';
 } else if($score >= 40) {
-
   echo $score . '点は「可」です。';
-} else if($score <= 40) {
-
+} else if($score < 40) {
   echo $score . '点は「不可」です。';
 }
 ?>

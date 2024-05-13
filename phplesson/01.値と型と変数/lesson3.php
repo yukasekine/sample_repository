@@ -18,11 +18,9 @@ $profile = array(
 echo $profile['name'];
 echo '<br>';
 
-$age = 20;
-$gender = '女性';
-
-echo $age.'歳・'.$gender;
+echo $profile['age'].'歳・'.$profile['gender'];
 echo '<br>';
+
 
 
 

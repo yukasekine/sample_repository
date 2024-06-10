@@ -85,6 +85,6 @@ th, td {
             echo "<td>".$totalsum."</td>";
             echo "</tr>";
         ?>
-</table>       
+    </table>       
 </body>
 </html>

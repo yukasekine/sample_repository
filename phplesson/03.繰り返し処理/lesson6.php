@@ -37,5 +37,54 @@ th, td {
 </head>
 <body>
     <!-- ここにテーブル表示 -->
+    <table>
+        <tr>
+            <th></th>
+            <?php
+            for ($i = 1; $i <= count($arr['r1']); $i++) {
+                $cKey = "c" . $i;
+                echo "<th>" . $cKey . "</th>";
+            } ?>
+            <th>横合計</th>
+        </tr>
+        <?php
+
+        // 1行作る繰り返し処理
+        for ($j = 1; $j <= count($arr); $j++) {
+            // 横合計の初期化
+            $rTotal = 0;
+            echo "<tr>";
+            $rKey = "r" . $j;
+            echo "<td>" . $rKey . "</td>";
+
+            // 表の数値出力の繰り返し処理
+            for ($k = 1; $k <= count($arr[$rKey]); $k++) {
+                $cKey = "c" . $k;
+
+                //縦合計の処理　
+
+                if (!empty($cTotalArray[$k - 1])) {
+                    $cTotalArray[$k - 1] = $cTotalArray[$k - 1] + $arr[$rKey][$cKey];
+                } else {
+                    $cTotalArray[$k - 1] = $arr[$rKey][$cKey];
+                }
+                // 数値の出力
+                echo "<td>". $arr[$rKey][$cKey]."</td>";
+                // 横合計の計算
+                $rTotal += $arr[$rKey][$cKey];
+            }
+            echo "<td>" . $rTotal . "</td>";
+            echo "</tr>";
+        }
+        $totalsum = 0;
+        echo "<tr>"."<td>"."縦合計"."</td>";
+            for($l=0; $l < count($cTotalArray); $l++){
+                echo "<td>".$cTotalArray[$l]."</td>";
+                $totalsum += $cTotalArray[$l];
+            }
+            echo "<td>".$totalsum."</td>";
+            echo "</tr>";
+        ?>
+</table>       
 </body>
 </html>

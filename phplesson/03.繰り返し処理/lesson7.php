@@ -31,5 +31,21 @@ $arr = [99, 3, 12, 45, 60, 100, 31, 7, 28];
 </head>
 <body>
     <!-- ここに並び替え後を表示 -->
+ <?php   
+    for($i = 0; $i < count($arr)-1; $i++){
+  for($j = $i + 1; $j < count($arr); $j++){
+    if($arr[$i] > $arr[$j]){
+      $tmp = $arr[$i];
+      $arr[$i] = $arr[$j];
+      $arr[$j] = $tmp;
+    }
+  }
+}
+foreach($arr as $value){
+  echo $value. ",";
+}
+?> 
+</body>
+</html> 
 </body>
 </html>

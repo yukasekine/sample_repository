@@ -7,6 +7,7 @@
 // 「○○○円です。」という形で出力してください。
 $choco = 100;
 $ame = 50 * 3;
-$sum = $choco + $ame;
+$chocolatesum = 100 * 1;
+$sum = $chocolatesum + $ame;
 echo $sum."円です。"; 
 ?> 

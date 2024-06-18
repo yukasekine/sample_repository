@@ -6,8 +6,9 @@
 // その合計を$sumと言う変数に代入して
 // 「○○○円です。」という形で出力してください。
 $choco = 100;
-$ame = 50 * 3;
-$chocolatesum = 100 * 1;
-$sum = $chocolatesum + $ame;
+$ame = 50;
+$chocolateSum = 100 * 1;
+$ameSum = 50 * 3;
+$sum = $chocolateSum + $ameSum;
 echo $sum."円です。"; 
 ?> 

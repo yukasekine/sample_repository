@@ -1,4 +1,4 @@
-<?php
+    <?php
 // 以下をそれぞれ表示してください。（すべて改行を行って出力すること)
 // 現在時刻を自動的に取得するPHPの関数があるので調べて実装してみて下さい。
 // 実行するとその都度現在の日本の日時に合わせて出力されるされるようになればOKです。
@@ -32,4 +32,5 @@ echo date("Y年m月d日 H時i分s秒",$three_days_later);
 echo "<br>";
 echo date("Y年m月d日 H時i分s秒",$twelve_hours_before);
 echo "<br>";
-echo ($today - $day) / (60 * 60 * 24).'日';
+$elapsed_days = ($today - $day) / (60 * 60 * 24);
+echo $elapsed_days."日";

@@ -21,15 +21,45 @@
 $yen = 10000;   // 購入金額
 $product = 150; // 商品金額
 
-function calc($yen, $product) {
-    // この関数内に処理を記述
+function calc($yen, $product)
+{
+    $change = $yen - $product;
+    if ($change < 0) {
+        return $change . "円足りません。";
+    }
+
+    $cash = [
+        10000,
+        5000,
+        1000,
+        500,
+        100,
+        50,
+        10,
+        5,
+        1
+    ];
+
+    foreach ($cash as $value) {
+        $count = floor($change / $value);
+        $change %= $value;
+        if ($count > 0) {
+            echo "{$value}円札×{$count}枚" . "、";
+        }
+    }
 }
+
+calc($yen, $product);
+
+// 金額検証
+$yen_test = 5000;
+calc($yen_test, $product);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<title>お釣り</title>
+    <meta charset="utf-8">
+    <title>お釣り</title>
 </head>
 <body>
     <section>

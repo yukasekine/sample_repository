@@ -10,7 +10,7 @@
 // ・現在日時から１２時間前（yyyy年mm月dd日 H時i分s秒）
 // ・2020年元旦から現在までの経過日数 (ddd日)
 date_default_timezone_set('Asia/Tokyo');
-$week =[
+$week = [
     '日', //0
     '月', //1
     '火', //2
@@ -26,10 +26,11 @@ $today = date("Y-m-d");
 $today = strtotime($today);
 $day = strtotime('2020-01-01');
 
-echo date ("Y年m月d日 $week[$date]曜日");
+echo date("Y年m月d日 $week[$date]曜日");
 echo "<br>";
-echo date("Y年m月d日 H時i分s秒",$three_days_later);
+echo date("Y年m月d日 H時i分s秒", $three_days_later);
 echo "<br>";
-echo date("Y年m月d日 H時i分s秒",$twelve_hours_before);
+echo date("Y年m月d日 H時i分s秒", $twelve_hours_before);
 echo "<br>";
-echo ($today - $day) / (60 * 60 * 24).'日';
+$elapsed_days = ($today - $day) / (60 * 60 * 24);
+echo $elapsed_days . "日";

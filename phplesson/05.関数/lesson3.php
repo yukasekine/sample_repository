@@ -23,9 +23,9 @@
 // 14
 // 15 アホわん
 
-function nabeatsu($num)
+function nabeatsu($call)
 {
-    for ($i = 1; $i <= $num; $i++) {
+    for ($i = 1; $i <= $call; $i++) {
         if ($i % 3 == 0 && $i % 5 == 0) {
             echo "アホわん";
         } elseif ($i % 3 == 0) {
@@ -38,8 +38,12 @@ function nabeatsu($num)
         echo "<br>";
     }
 }
+
+nabeatsu($call);
+
 //テスト検証
-echo nabeatsu(15);
+$call_test = 15;
+echo nabeatsu($call_test);
 ?>
 <!DOCTYPE html>
 <html lang="ja">

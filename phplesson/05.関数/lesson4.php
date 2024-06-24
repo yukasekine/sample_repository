@@ -51,7 +51,7 @@ function calc($yen, $product)
 
 calc($yen, $product);
 
-// 金額検証
+// テスト検証
 $yen_test = 5000;
 calc($yen_test, $product);
 ?>

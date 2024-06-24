@@ -4,5 +4,9 @@ function convertThreeTimes($num)
 {
     echo $num * 3;
 }
-echo convertThreeTimes(5);
+convertThreeTimes($num);
+
+//テスト検証
+$num_test = 5;
+echo convertThreeTimes($num_test);
 // 15

@@ -34,3 +34,4 @@ echo date("Y年m月d日 H時i分s秒", $twelve_hours_before);
 echo "<br>";
 $elapsed_days = ($today - $day) / (60 * 60 * 24);
 echo $elapsed_days . "日";
+// ・2020年元旦から現在までの経過日数 (ddd日)

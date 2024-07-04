@@ -23,21 +23,40 @@
 // 14
 // 15 アホわん
 
-
-function nabeatsu($i)
+function nabeatsu(int $call)
 {
-    // この関数内に処理を記述
+    for ($i = 1; $i <= $call; $i++) {
+        if ($i % 3 == 0 && $i % 5 == 0) {
+            echo "アホわん";
+        } elseif ($i % 3 == 0) {
+            echo "アホ";
+        } elseif ($i % 5 == 0) {
+            echo "わん";
+        } else {
+            echo $i;
+        }
+        echo "<br>";
+    }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="utf-8">
-<title>世界のナベアツプログラム</title>
+    <meta charset="utf-8">
+    <title>世界のナベアツプログラム</title>
 </head>
+
 <body>
     <section>
         <!-- ここに結果表示 -->
+        <?php
+        //  テスト検証
+        $call_test = 15;
+        nabeatsu($call_test);
+        ?>
     </section>
 </body>
+
 </html>

@@ -9,8 +9,8 @@
 // 3回目の勝利です。
 // $_SESSIONの挙動やswitch文については調べてみてください。
 
-
-if (! isset($_SESSION['result'])) {
+session_start();
+if (!isset($_SESSION['result'])) {
     $_SESSION['result'] = 0;
 }
 
@@ -25,6 +25,7 @@ class Player
                 break;
             case 2:
                 $janken = 'チョキ';
+                break;
             case 3:
                 $janken = 'パー';
                 break;
@@ -35,14 +36,14 @@ class Player
     }
 }
 
-class Me
+class Me extends Player
 {
     private $name;
     private $choice;
 
     public function __construct(string $lastName, string $firstName, int $choice)
     {
-        $this->name   = $lastName.$firstName;
+        $this->name   = $lastName . $firstName;
         $this->choice = $choice;
     }
 
@@ -57,7 +58,7 @@ class Me
     }
 }
 
-class Enemy
+class Enemy extends Player
 {
     private $choice;
     public function __construct()
@@ -81,7 +82,7 @@ class Battle
         $this->second = $enemy->getChoice();
     }
 
-    private function judge(): int
+    private function judge(): string
     {
         if ($this->first === $this->second) {
             return '引き分け';
@@ -112,62 +113,65 @@ class Battle
         }
     }
 
-    private function countVictories()
+    public function countVictories()
     {
         if ($this->judge() === '勝ち') {
             return $_SESSION['result'] += 1;
         }
     }
 
-    public function getVitories()
+    public function getVitories(): int
     {
         return $_SESSION['result'];
     }
 
-    public function showResult()
+    public function showResult(): string
     {
         return $this->judge();
     }
 }
 
-if (! empty($_POST)) {
-    $me    = new Me($_POST['last_name'], $_POST['first_name'], $_POST['choice'], $_POST['choice']);
+if (!empty($_POST)) {
+    $me    = new Me($_POST['last_name'], $_POST['first_name'], $_POST['choice'],);
     $enemy = new Enemy();
-    echo $me->getName().'は'.$me->getChoice().'を出しました。';
-    echo '<br>'
-    echo '相手は'.$enemy->getChoice().'を出しました。';
+    echo $me->getName() . 'は' . $me->getChoice() . 'を出しました。';
+    echo '<br>';
+    echo '相手は' . $enemy->getChoice() . 'を出しました。';
     echo '<br>';
     $battle = new Battle($me, $enemy);
-    echo '勝敗は'.$battle->showResult().'です。';
+    echo '勝敗は' . $battle->showResult() . 'です。';
+    echo '<br>';
+    $battle->countVictories();
     if ($battle->showResult() === '勝ち') {
-
-        echo '<br>';
-        echo $battle->getVitories().'回目の勝利です。';
+        echo $_SESSION['result'] . '回目の勝利です。';
     }
 }
 
 ?>
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="utf-8">
-<title>デバック練習</title>
+    <meta charset="utf-8">
+    <title>デバック練習</title>
 </head>
+
 <body>
     <section>
-    <form action='./lesson3.php'>
-        <label>姓</label>
-        <input type="text" name="last_name" value="<?php echo '山田' ?>" />
-        <label>名</label>
-        <input type="text" name="first_name" value="<?php echo '太郎' ?>" />
-        <select name='choice'>
-            <option value=0 >--</option>
-            <option value=1 >グー</option>
-            <option value=2 >チョキ</option>
-            <option value=3 >パー</option>
-        </select>
-        <input type="submit" value="送信する"/>
-    </form>
+        <form action='./lesson3.php' method="post">
+            <label>姓</label>
+            <input type="text" name="last_name" value="山田" />
+            <label>名</label>
+            <input type="text" name="first_name" value="太郎" />
+            <select name='choice'>
+                <option value="0">--</option>
+                <option value="1">グー</option>
+                <option value="2">チョキ</option>
+                <option value="3">パー</option>
+            </select>
+            <input type="submit" value="送信する" />
+        </form>
     </section>
 </body>
+
 </html>
